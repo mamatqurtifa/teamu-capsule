@@ -10,8 +10,8 @@ class CapsuleController extends Controller
 {
     public function index()
     {
-        $capsules = Capsule::where('user_id', Auth::id())->get();
-        return view('capsules.index', compact('capsules'));
+        $capsules = Capsule::where('user_id', Auth::id())->latest()->get();
+        return view('capsule-post.index', compact('capsules'));
     }
 
     public function store(Request $request)
@@ -20,6 +20,8 @@ class CapsuleController extends Controller
             'title' => 'required|string|max:255',
             'text' => 'required|string',
             'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'capsule_type' => 'required|in:public,private',
+            'future_time' => 'required|date|after:now',
         ]);
 
         $imagePath = $request->file('image')->store('capsules', 'public');
@@ -29,8 +31,10 @@ class CapsuleController extends Controller
             'text' => $validated['text'],
             'image' => $imagePath,
             'user_id' => Auth::id(),
+            'capsule_type' => $validated['capsule_type'],
+            'future_time' => $validated['future_time'],
         ]);
 
-        return redirect()->route('capsules.index')->with('success', 'Capsule created successfully.');
+        return redirect()->route('capsule-post.index')->with('success', 'Capsule created successfully.');
     }
 }

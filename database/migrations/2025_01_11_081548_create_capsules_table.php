@@ -17,7 +17,9 @@ return new class extends Migration
             $table->text('text');
             $table->string('image');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->enum('capsule_type', ['public', 'private'])->default('private');
             $table->timestamps();
+            $table->timestamp('future_time');
         });
         
     }

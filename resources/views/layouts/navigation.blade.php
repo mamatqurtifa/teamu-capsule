@@ -19,10 +19,6 @@
                     <x-nav-link :href="route('capsules.index')" :active="request()->routeIs('capsules.index')">
                         {{ __('Capsule') }}
                     </x-nav-link>
-                    <!-- Link Capsule Post -->
-                    <x-nav-link :href="route('capsule-post.index')" :active="request()->routeIs('capsule-post.index')">
-                        {{ __('Post Capsule') }}
-                    </x-nav-link>
                     <!-- Link Profile -->
                     <x-nav-link :href="route('profile.edit')">
                         {{ __('Profile') }}
@@ -92,9 +88,6 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('capsules.index')" :active="request()->routeIs('capsules.index')">
                 {{ __('Capsule') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('capsule-post.index')">
-                {{ __('Post Capsule') }}
             </x-responsive-nav-link>
         </div>
 

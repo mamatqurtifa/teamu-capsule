@@ -28,6 +28,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('/capsule-post', [CapsulePostController::class, 'index'])->name('capsule-post.index');
+    Route::get('/capsule-post', function () {
+        return redirect('/capsules');
+    });
     Route::post('/capsule-post', [CapsulePostController::class, 'store'])->name('capsule-post.store');
 });
