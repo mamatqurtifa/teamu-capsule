@@ -29,8 +29,8 @@
         <select name="capsule_type" id="capsule_type"
             class="mt-1 block w-full rounded border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
             required>
-            <option value="public">Public</option>
-            <option value="private">Private</option>
+            <option value="public" {{ old('capsule_type') === 'public' ? 'selected' : '' }}>Public</option>
+            <option value="private" {{ old('capsule_type') === 'private' ? 'selected' : '' }}>Private</option>
         </select>
     </div>
 

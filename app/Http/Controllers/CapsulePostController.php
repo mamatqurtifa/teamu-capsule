@@ -31,8 +31,12 @@ class CapsulePostController extends Controller
             'text' => $validated['text'],
             'image' => $imagePath,
             'user_id' => Auth::id(),
-            'capsule_type' => $validated['capsule_type'],
+            'capsule_type' => $request->input('capsule_type'),
             'future_time' => $validated['future_time'],
+        ]);
+
+        $request->validate([
+            'capsule_type' => 'required|in:public,private',
         ]);
 
         return redirect()->route('capsule-post.index')->with('success', 'Capsule created successfully.');

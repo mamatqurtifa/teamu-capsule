@@ -20,9 +20,14 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->enum('capsule_type', ['public', 'private'])->default('private');
             $table->timestamps();
-            $table->timestamp('future_time')->default(DB::raw('CURRENT_TIMESTAMP + INTERVAL 1 DAY'))->change();
+            $table->timestamp('future_time')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
         
+    }
+
+    public function run()
+    {
+        DB::statement('UPDATE capsules SET future_time = DATE_ADD(CURRENT_TIMESTAMP, INTERVAL 1 WEEK)');
     }
 
     /**

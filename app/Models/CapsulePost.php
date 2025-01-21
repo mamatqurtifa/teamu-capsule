@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class CapsulePost extends Model {
     use HasFactory;
 
-    protected $fillable = [ 'title', 'text', 'image', 'user_id' ];
+    protected $fillable = [ 'title', 'text', 'image', 'user_id',  'capsule_type', 'future_time' ];
 
     public function user() {
         return $this->belongsTo( User::class );

@@ -9,7 +9,7 @@ class Capsule extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'text', 'image', 'user_id'];
+    protected $fillable = ['title', 'text', 'image', 'user_id', 'capsule_type', 'future_time']; // Tambahkan capsule_type
 
     public function user()
     {
