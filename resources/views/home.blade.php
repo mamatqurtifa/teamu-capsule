@@ -913,7 +913,7 @@
     @include('home-components.explore-more')
     @include('home-components.feature')
     <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-        <img id="background" class="absolute -left-40 -rotate-12 top-0 max-w-[870px] shadow-xl lg:flex hidden"
+        <img id="background" class="absolute -left-40 -rotate-12 top-0 max-w-[870px] shadow-xl lg:flex hidden rounded-3xl"
             src="https://img.pikbest.com/png-images/20240607/white-alarm-clock-3d-render---isolated-on-transparent-background_10601977.png!sw800"
             alt="Laravel background" />
     </div>
