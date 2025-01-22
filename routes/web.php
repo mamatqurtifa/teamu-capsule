@@ -6,7 +6,11 @@ use App\Http\Controllers\CapsuleController;
 use App\Http\Controllers\CapsulePostController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/login-form', function () {
+    return view('login');
 });
 
 Route::get('/dashboard', function () {
@@ -30,4 +34,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
 Route::middleware('auth')->group(function () {
     Route::get('/capsule-post', [CapsulePostController::class, 'index'])->name('capsule-post.index');
     Route::post('/capsule-post', [CapsulePostController::class, 'store'])->name('capsule-post.store');
+});
+
+Route::fallback(function () {
+    return response()->view('errors.404', [], 404);
 });
