@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CapsuleController;
 use App\Http\Controllers\CapsulePostController;
 
+
 Route::get('/', function () {
     return view('home');
 });
@@ -12,6 +13,18 @@ Route::get('/', function () {
 Route::get('/login-form', function () {
     return view('login');
 });
+
+Route::get('/login-test', function () {
+    return view('login');
+});
+
+Route::get('/dashboard-test', function () {
+    return view('dashboard-test');
+});
+
+Route::get('/{section}', function ($section) {
+    return view('home', ['section' => $section]);
+})->where('section', 'about|features|testimonials')->name('section');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -1,4 +1,4 @@
-<div class="bg-white py-24 sm:py-32">
+<div class="bg-white py-24 sm:py-32" id="features">
     <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <p
             class="mx-auto mb-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">

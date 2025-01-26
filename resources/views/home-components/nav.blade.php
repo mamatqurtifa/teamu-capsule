@@ -4,8 +4,8 @@
         <div class="flex lg:flex-1">
             <a href="#" class="-m-1.5 p-1.5">
                 <span class="sr-only">Your Company</span>
-                <img class="h-8 w-auto"
-                    src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg"
+                <img class="h-8 w-auto bg-white rounded-full"
+                    src="https://png.pngtree.com/png-vector/20240413/ourmid/pngtree-clock-icon-with-arrows-pointer-vector-for-your-web-and-mobile-png-image_12277196.png"
                     alt="Logo">
             </a>
         </div>
@@ -24,10 +24,40 @@
                 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
                 backdrop-filter: blur(8px);
                 -webkit-backdrop-filter: blur(8px);
-                border: 1px solid rgba(255, 255, 255, 0.3);">
-            <a href="#" class="text-sm font-semibold text-gray-900">About</a>
-            <a href="#" class="text-sm font-semibold text-gray-900">Features</a>
-            <a href="#" class="text-sm font-semibold text-gray-900">Product</a>
+                border: 1px solid rgba(255, 255, 255, 0.3);"
+            x-data="{
+                init() {
+                        const hash = window.location.pathname;
+                        if (hash && hash !== '/') {
+                            const targetId = hash.replace('/', '#');
+                            const target = document.querySelector(targetId);
+                            if (target) {
+                                target.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start',
+                                });
+                            }
+                        }
+                    },
+                    scrollTo(event) {
+                        const targetId = event.target.getAttribute('data-scroll-target');
+                        const target = document.querySelector(targetId);
+            
+                        if (target) {
+                            window.history.pushState(null, '', event.target.getAttribute('href'));
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start',
+                            });
+                        }
+                    }
+            }" x-init="init">
+            <a href="/about" class="text-sm font-semibold text-gray-900" data-scroll-target="#about"
+                @click.prevent="scrollTo">About</a>
+            <a href="/features" class="text-sm font-semibold text-gray-900" data-scroll-target="#features"
+                @click.prevent="scrollTo">Features</a>
+            <a href="/testimonials" class="text-sm font-semibold text-gray-900" data-scroll-target="#testimonials"
+                @click.prevent="scrollTo">Testimonials</a>
         </div>
 
         @if (Route::has('login'))
@@ -76,7 +106,8 @@
             <div class="flex items-center justify-between">
                 <a href="#" class="-m-1.5 p-1.5">
                     <span class="sr-only">Your Company</span>
-                    <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
+                    <img class="h-8 w-auto"
+                        src="https://png.pngtree.com/png-vector/20240413/ourmid/pngtree-clock-icon-with-arrows-pointer-vector-for-your-web-and-mobile-png-image_12277196.png"
                         alt="Logo">
                 </a>
                 <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="menuOpen = false">
@@ -101,7 +132,8 @@
                             class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50">Log
                             in</a>
                         <a href="/register"
-                            class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50">Sign Up</a>
+                            class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50">Sign
+                            Up</a>
                     </div>
                 </div>
             </div>
