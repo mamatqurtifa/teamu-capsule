@@ -9,9 +9,8 @@
         <div class="mt-10 flex items-center justify-center gap-x-6">
             <a href="/"
                 class="rounded-full bg-gray-900 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 transition ease-in-out delay-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Go
-                back home</a>
-            <a href="#" class="text-sm font-semibold text-gray-900">Contact support <span
-                    aria-hidden="true">&rarr;</span></a>
+                back home <span
+                aria-hidden="true">&rarr;</span></a>
         </div>
     </div>
 </main>
