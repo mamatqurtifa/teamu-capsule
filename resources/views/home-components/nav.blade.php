@@ -1,12 +1,25 @@
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-<header class="bg-none fixed inset-x-0 top-0 z-50" x-data="{ menuOpen: false }">
+<header class="bg-none fixed inset-x-0 top-0 z-50" x-data="{ menuOpen: false, scrollToAndClose(event) {
+    const targetId = event.target.getAttribute('data-scroll-target');
+    const target = document.querySelector(targetId);
+
+    if (target) {
+        window.history.pushState(null, '', event.target.getAttribute('href'));
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+
+        setTimeout(() => {
+            this.menuOpen = false;
+        }, 300);
+    }
+} }">
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
             <a href="#" class="-m-1.5 p-1.5">
-                <span class="sr-only">Your Company</span>
-                <img class="h-8 w-auto bg-white rounded-full"
-                    src="https://png.pngtree.com/png-vector/20240413/ourmid/pngtree-clock-icon-with-arrows-pointer-vector-for-your-web-and-mobile-png-image_12277196.png"
-                    alt="Logo">
+                <span class="sr-only">Teamu Capsule</span>
+                <img class="h-10 w-auto rounded-full" src="https://qurtifa.my.id/teamu.png" alt="Logo">
             </a>
         </div>
         <div class="flex lg:hidden">
@@ -105,10 +118,8 @@
             class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div class="flex items-center justify-between">
                 <a href="#" class="-m-1.5 p-1.5">
-                    <span class="sr-only">Your Company</span>
-                    <img class="h-8 w-auto"
-                        src="https://png.pngtree.com/png-vector/20240413/ourmid/pngtree-clock-icon-with-arrows-pointer-vector-for-your-web-and-mobile-png-image_12277196.png"
-                        alt="Logo">
+                    <span class="sr-only">Teamu Capsule</span>
+                    <img class="h-10 w-auto" src="https://qurtifa.my.id/teamu.png" alt="Logo">
                 </a>
                 <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="menuOpen = false">
                     <span class="sr-only">Close menu</span>
@@ -120,21 +131,38 @@
             <div class="mt-6 flow-root">
                 <div class="-my-6 divide-y divide-gray-500/10">
                     <div class="space-y-2 py-6">
-                        <a href="#"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">About</a>
-                        <a href="#"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">Features</a>
-                        <a href="#"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">Product</a>
+                        <a href="/about"
+                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+                            data-scroll-target="#about" @click.prevent="scrollToAndClose">About</a>
+                        <a href="/features"
+                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+                            data-scroll-target="#features" @click.prevent="scrollToAndClose">Features</a>
+                        <a href="/testimonials"
+                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+                            data-scroll-target="#testimonials" @click.prevent="scrollToAndClose">Testimonials</a>
                     </div>
-                    <div class="py-6">
-                        <a href="/login"
-                            class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50">Log
-                            in</a>
-                        <a href="/register"
-                            class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50">Sign
-                            Up</a>
-                    </div>
+                    @if (Route::has('login'))
+                        <div class="py-6">
+                            @auth
+                                <a href="{{ url('/dashboard') }}"
+                                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50">
+                                    Dashboard <span aria-hidden="true">&rarr;</span>
+                                </a>
+                            @else
+                                <a href="{{ route('login') }}"
+                                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50">
+                                    Log in
+                                </a>
+
+                                @if (Route::has('register'))
+                                    <a href="{{ route('register') }}"
+                                        class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50">
+                                        Register <span aria-hidden="true">&rarr;</span>
+                                    </a>
+                                @endif
+                            @endauth
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>

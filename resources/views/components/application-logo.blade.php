@@ -1,1 +1,1 @@
-<img src="https://png.pngtree.com/png-vector/20240413/ourmid/pngtree-clock-icon-with-arrows-pointer-vector-for-your-web-and-mobile-png-image_12277196.png" alt="" srcset="" {{ $attributes }}>
+<img src="https://qurtifa.my.id/teamu.png" alt="" srcset="" {{ $attributes }}>

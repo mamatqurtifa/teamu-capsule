@@ -18,10 +18,6 @@ Route::get('/login-test', function () {
     return view('login');
 });
 
-Route::get('/dashboard-test', function () {
-    return view('dashboard-test');
-});
-
 Route::get('/{section}', function ($section) {
     return view('home', ['section' => $section]);
 })->where('section', 'about|features|testimonials')->name('section');
