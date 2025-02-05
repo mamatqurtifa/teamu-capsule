@@ -19,7 +19,7 @@
         <div class="flex w-full max-w-md sm:max-w-md justify-center items-center px-6 py-8 md:px-6 md:py-10 bg-white rounded-2xl shadow-lg flex-col border">
             <div class="sm:w-full sm:max-w-md">
                 <img class="mx-auto h-12 w-auto"
-                    src="https://qurtifa.my.id/teamu.png" alt="Teamu Capsule">
+                    src="{{ asset('teamu.png') }}" alt="Teamu Capsule">
                 <h2 class="mt-6 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Create your account
                 </h2>
             </div>

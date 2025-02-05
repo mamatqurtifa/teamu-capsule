@@ -1,1 +1,1 @@
-<img src="https://qurtifa.my.id/teamu.png" alt="" srcset="" {{ $attributes }}>
+<img src="{{ asset('teamu.png') }}" alt="" srcset="" {{ $attributes }}>

@@ -21,18 +21,17 @@
     @endif
 </head>
 
-<body class="font-sans antialiased dark:bg-black dark:text-white/50">
+<body class="font-sans antialiased dark:bg-black">
     @include('home-components.nav')
     @include('home-components.hero')
     @include('home-components.explore-more')
     @include('home-components.feature')
-    <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50 z-10">
+    <div class="bg-gray-50 text-black/50 dark:bg-black -z-10">
         <img id="background"
             class="absolute -left-44 -rotate-12 top-0 max-w-[870px] shadow-xl lg:flex hidden rounded-3xl xl:scale-90"
             src="https://img.pikbest.com/png-images/20240607/white-alarm-clock-3d-render---isolated-on-transparent-background_10601977.png!sw800"
             alt="Laravel background" />
     </div>
-    </main>
     @include('home-components.testimonial')
     @include('home-components.footer')
 </body>

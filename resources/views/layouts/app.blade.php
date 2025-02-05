@@ -17,6 +17,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="shortcut icon" href="{{ asset('teamu.png') }}" type="image/x-icon">
 </head>
 
 <body class="font-sans antialiased">

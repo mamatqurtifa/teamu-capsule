@@ -23,7 +23,6 @@
                 <h2 class="mt-6 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Create your account
                 </h2>
             </div>
-
             <div class="mt-6 w-full sm:max-w-md">
                 <form class="space-y-4 w-full" method="POST" action="{{ route('register') }}">
                     @csrf
