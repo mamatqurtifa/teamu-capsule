@@ -1,51 +1,108 @@
-<div class="bg-white py-24 sm:py-32" id="about">
+<section class="bg-white py-24 sm:py-32" id="about">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl lg:text-center">
-            <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-balance">
-                Explore More</p>
-            <p class="mt-6 text-lg/8 text-gray-600">Teamu is your personal memory vault—a platform designed to preserve
-                your precious moments. Whether it’s a cherished memory or an important milestone, Teamu ensures your
-                stories remain timeless and accessible for years to come.</p>
+        <!-- Header Section -->
+        <div class="mx-auto max-w-2xl lg:text-center" data-aos="fade-up">
+            <h2 class="text-base font-semibold leading-7 text-indigo-600">About Us</h2>
+            <p class="mt-2 text-pretty text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-balance">
+                Your Digital Time Machine
+            </p>
+            <p class="mt-6 text-lg/8 text-gray-600">
+                Teamu is more than just storage—it's your personal memory vault that bridges past, present, and future.
+                Create meaningful time capsules that preserve your story, letting you rediscover cherished moments
+                exactly
+                when they mean the most.
+            </p>
         </div>
+
+        <!-- Features Grid -->
         <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-                <div class="relative pl-16">
+                <!-- Feature 1: Push Memories -->
+                <div class="relative pl-16 group" data-aos="fade-right">
                     <dt class="text-base/7 font-semibold text-gray-900">
                         <div
-                            class="absolute left-0 top-0 flex size-10 items-center justify-center rounded-lg bg-gray-800">
+                            class="absolute left-0 top-0 flex size-12 items-center justify-center rounded-xl bg-gray-900 shadow-lg transition-all duration-300 group-hover:bg-indigo-600">
                             <svg class="size-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M12 16.5V9.75m0 0 3 3m-3-3-3 3M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z" />
                             </svg>
                         </div>
-                        Push your memories
+                        Preserve Your Journey
                     </dt>
-                    <dd class="mt-2 text-base/7 text-gray-600">Store and organize your cherished memories effortlessly.
-                        Securely upload photos or documents to keep
-                        them safe and accessible anytime.</dd>
+                    <dd class="mt-2 text-base/7 text-gray-600">
+                        <span class="block mb-3">
+                            Securely store your meaningful moments—photos, messages, and milestones—in your personal
+                            digital vault.
+                        </span>
+                        <ul class="space-y-2 text-sm text-gray-500">
+                            <li class="flex items-center">
+                                <svg class="mr-2 size-4 text-indigo-500" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                Unlimited storage space
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="mr-2 size-4 text-indigo-500" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                Support for all image formats
+                            </li>
+                        </ul>
+                    </dd>
                 </div>
-                <div class="relative pl-16">
+
+                <!-- Feature 2: Time Reveal -->
+                <div class="relative pl-16 group" data-aos="fade-left">
                     <dt class="text-base/7 font-semibold text-gray-900">
                         <div
-                            class="absolute left-0 top-0 flex size-10 items-center justify-center rounded-lg bg-gray-800">
-                            <svg class="size-6 text-white" xmlns="http://www.w3.org/2000/svg" width="24"
-                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-alarm-clock">
-                                <circle cx="12" cy="13" r="8" />
-                                <path d="M12 9v4l2 2" />
-                                <path d="M5 3 2 6" />
-                                <path d="m22 6-3-3" />
-                                <path d="M6.38 18.7 4 21" />
-                                <path d="M17.64 18.67 20 21" />
+                            class="absolute left-0 top-0 flex size-12 items-center justify-center rounded-xl bg-gray-900 shadow-lg transition-all duration-300 group-hover:bg-indigo-600">
+                            <svg class="size-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
-                        Let Time Reveal It
+                        Time-Released Memories
                     </dt>
-                    <dd class="mt-2 text-base/7 text-gray-600">The capsule will slowly open up as time goes by, just
-                        like those surprises that reveal themselves when you least expect it.</dd>
+                    <dd class="mt-2 text-base/7 text-gray-600">
+                        <span class="block mb-3">
+                            Set the perfect moment for your memories to resurface. Like a letter to your future self,
+                            each capsule opens at just the right time.
+                        </span>
+                        <ul class="space-y-2 text-sm text-gray-500">
+                            <li class="flex items-center">
+                                <svg class="mr-2 size-4 text-indigo-500" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                Customizable unlock dates
+                            </li>
+                        </ul>
+                    </dd>
                 </div>
             </dl>
         </div>
+
+        
     </div>
-</div>
+</section>
+
+@push('styles')
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+@endpush
+
+@push('scripts')
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+@endpush

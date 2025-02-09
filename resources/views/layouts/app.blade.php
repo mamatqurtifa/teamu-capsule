@@ -40,6 +40,7 @@
         <main>
             {{ $slot }}
         </main>
+        @include('home-components.footer')
     </div>
 </body>
 

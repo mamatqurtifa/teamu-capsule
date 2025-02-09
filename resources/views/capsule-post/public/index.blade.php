@@ -13,9 +13,9 @@
                         </div>
 
                         <!-- Filters -->
-                        <div class="flex items-center space-x-4">
+                        <div class="flex items-center space-x-4 border shadow-md">
                             <select x-model="sortBy" @change="filterCapsules()" 
-                                    class="rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                                    class="rounded-md border shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
                                 <option value="latest">Latest</option>
                                 <option value="oldest">Oldest</option>
                                 <option value="opening_soon">Opening Soon</option>
@@ -26,7 +26,7 @@
                                        x-model="searchQuery"
                                        @input.debounce.300ms="filterCapsules()"
                                        placeholder="Search capsules..."
-                                       class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 pl-10 pr-4 py-2">
+                                       class="w-full rounded-md border shadow-sm focus:border-indigo-500 focus:ring-indigo-500 pl-10 pr-4 py-2">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -39,7 +39,7 @@
                     <!-- Capsules Grid -->
                     <div id="capsules-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         @foreach ($capsules as $capsule)
-                            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg border border-gray-200 hover:border-indigo-300 transition-colors duration-200">
+                            <div class="bg-white overflow-hidden sm:rounded-lg border border-gray-200 hover:border-indigo-300 transition-colors duration-200 shadow-md">
                                 <div class="relative">
                                     <!-- Image Section -->
                                     <div class="relative h-48 overflow-hidden">

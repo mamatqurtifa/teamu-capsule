@@ -97,13 +97,13 @@
 
         <div class="hidden lg:flex lg:gap-x-12 py-2 px-4 items-center rounded-full glass-effect">
             <a href="/about" class="text-sm font-semibold transition-colors duration-200"
-                :class="{ 'text-indigo-600': activeSection === 'about', 'text-gray-900': activeSection !== 'about' }"
+                :class="{ 'text-gray-900': activeSection === 'about', 'text-gray-900': activeSection !== 'about' }"
                 data-scroll-target="#about" @click.prevent="scrollTo">About</a>
             <a href="/features" class="text-sm font-semibold transition-colors duration-200"
-                :class="{ 'text-indigo-600': activeSection === 'features', 'text-gray-900': activeSection !== 'features' }"
+                :class="{ 'text-gray-900': activeSection === 'features', 'text-gray-900': activeSection !== 'features' }"
                 data-scroll-target="#features" @click.prevent="scrollTo">Features</a>
             <a href="/testimonials" class="text-sm font-semibold transition-colors duration-200"
-                :class="{ 'text-indigo-600': activeSection === 'testimonials', 'text-gray-900': activeSection !== 'testimonials' }"
+                :class="{ 'text-gray-900': activeSection === 'testimonials', 'text-gray-900': activeSection !== 'testimonials' }"
                 data-scroll-target="#testimonials" @click.prevent="scrollTo">Testimonials</a>
         </div>
 

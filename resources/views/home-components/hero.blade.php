@@ -16,10 +16,17 @@
                     <p class="mt-8 text-lg font-medium text-gray-500 sm:text-xl">Capture and cherish memories with <span
                             class="text-gray-800 font-semibold">Teamu
                             Capsule</span></p>
-                    <div class="mt-10 flex items-center justify-center gap-x-6">
-                        <a href="/register"
-                            class="rounded-full bg-gray-900 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 transition ease-in-out delay-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
-                            Started</a>
+                    <!-- CTA Section -->
+                    <div class="mt-16 text-center" data-aos="fade-up">
+                        <a href="{{ route('register') }}"
+                            class="inline-flex items-center gap-x-2 rounded-full bg-gray-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-colors duration-300 ease-in-out">
+                            Start Your Journey
+                            <svg class="size-4" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>

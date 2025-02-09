@@ -1,99 +1,109 @@
-<div class="bg-white py-24 sm:py-32" id="testimonials">
+<section class="bg-white py-24 sm:py-32" id="testimonials">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <p
-            class="mx-auto mb-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
-            What Users Say</p>
-        <h2 class="text-center text-base/7 font-semibold text-gray-600">See what our users have to say about Teamu
-            Capsule</h2>
+        <!-- Section Header -->
+        <div class="mx-auto max-w-2xl text-center">
+            <p class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                What Users Say
+            </p>
+            <h2 class="mt-4 text-lg font-medium leading-8 text-gray-600">
+                See what our users have to say about Teamu Capsule
+            </h2>
+        </div>
+
+        <!-- Testimonials Grid -->
         <div
             class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            <article class="flex max-w-xl flex-col items-start justify-between">
-                <div class="flex items-center gap-x-4 text-xs">
-                    <time datetime="2020-03-16" class="text-gray-500">January 10, 2028</time>
+            <!-- Testimonial 1 -->
+            <article
+                class="flex flex-col items-start justify-between rounded-2xl bg-white p-8 ring-1 ring-gray-200 hover:ring-indigo-500 transition-shadow duration-300">
+                <!-- Quote Icon -->
+                <div class="mb-6">
+                    <svg class="h-8 w-8 text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z" />
+                    </svg>
                 </div>
-                <div class="group relative">
-                    <h3 class="mt-4 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-                        <a href="#">
-                            <span class="absolute inset-0"></span>
-                            It has never gotten so sentimental about remembering the future. What a great website!
-                        </a>
-                    </h3>
+
+                <div class="flex-1">
+                    <time datetime="2028-01-10" class="text-sm text-gray-500">
+                        January 10, 2028
+                    </time>
+
+                    <p class="mt-4 text-lg font-medium leading-6 text-gray-900">
+                        "It has never gotten so sentimental about remembering the future. What a great website!"
+                    </p>
                 </div>
-                <div class="relative mt-4 flex items-center gap-x-4">
-                    <img src="https://cdn.motor1.com/images/mgl/RRqLr/s1/1x1/elon-musk.webp" alt=""
-                        class="size-10 rounded-full bg-gray-50">
-                    <div class="text-sm/6">
-                        <p class="font-semibold text-gray-900">
-                            <a href="#">
-                                <span class="absolute inset-0"></span>
-                                Elon Musk
-                            </a>
-                        </p>
-                        <p class="text-gray-600">CEO of SpaceX & Tesla</p>
-                    </div>
-                </div>
-            </article>
-            <article class="flex max-w-xl flex-col items-start justify-between">
-                <div class="flex items-center gap-x-4 text-xs">
-                    <time datetime="2020-03-16" class="text-gray-500">June 21, 2031</time>
-                </div>
-                <div class="group relative">
-                    <h3 class="mt-4 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-                        <a href="#">
-                            <span class="absolute inset-0"></span>
-                            Time Capsule is a beautiful way to preserve history and inspire future generations with our
-                            stories.
-                        </a>
-                    </h3>
-                </div>
-                <div class="relative mt-4 flex items-center gap-x-4">
-                    <img src="https://cdn1-production-images-kly.akamaized.net/kr20b7RdrjFEr0JCLS-6e7z8WZk=/1200x1200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4540978/original/011145800_1692239231-WhatsApp_Image_2023-08-17_at_09.18.34.jpeg"
-                        alt="" class="size-10 rounded-full bg-gray-50">
-                    <div class="text-sm/6">
-                        <p class="font-semibold text-gray-900">
-                            <a href="#">
-                                <span class="absolute inset-0"></span>
-                                Joko Widodo
-                            </a>
-                        </p>
-                        <p class="text-gray-600">7th President of Indonesia</p>
-                    </div>
-                </div>
-            </article>
-            <article class="flex max-w-xl flex-col items-start justify-between">
-                <div class="flex items-center gap-x-4 text-xs">
-                    <time datetime="2020-03-16" class="text-gray-500">October 7, 2007</time>
-                </div>
-                <div class="group relative">
-                    <h3 class="mt-4 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-                        <a href="#">
-                            <span class="absolute inset-0"></span>
-                            Through Time Capsule, memories can transcend time, creating connections beyond generations.
-                        </a>
-                    </h3>
-                </div>
-                <div class="relative mt-4 flex items-center gap-x-4">
-                    <img src="/storage/capsules/rapek.jpg"
-                        alt="" class="size-10 rounded-full bg-gray-50">
-                    <div class="text-sm/6">
-                        <p class="font-semibold text-gray-900">
-                            <a href="#">
-                                <span class="absolute inset-0"></span>
-                                Rafi Ahmad
-                            </a>
-                        </p>
-                        <p class="text-gray-600">Theoretical Physicist</p>
+
+                <div class="mt-8 flex w-full items-center gap-x-4 border-t border-gray-100 pt-8">
+                    <img src="https://cdn.motor1.com/images/mgl/RRqLr/s1/1x1/elon-musk.webp" alt="Elon Musk"
+                        class="h-12 w-12 rounded-full object-cover" loading="lazy">
+                    <div>
+                        <p class="font-semibold text-gray-900">Elon Musk</p>
+                        <p class="text-sm text-gray-600">CEO of SpaceX & Tesla</p>
                     </div>
                 </div>
             </article>
 
-            <div class="absolute inset-x-0 bottom-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:bottom-[calc(100%-30rem)]"
-                aria-hidden="true">
-                <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#000000] to-[#cac9cd] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+            <!-- Testimonial 2 -->
+            <article
+                class="flex flex-col items-start justify-between rounded-2xl bg-white p-8 ring-1 ring-gray-200 hover:ring-indigo-500 transition-shadow duration-300">
+                <div class="mb-6">
+                    <svg class="h-8 w-8 text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z" />
+                    </svg>
                 </div>
-            </div>
-            <!-- More posts... -->
+
+                <div class="flex-1">
+                    <time datetime="2031-06-21" class="text-sm text-gray-500">
+                        June 21, 2031
+                    </time>
+
+                    <p class="mt-4 text-lg font-medium leading-6 text-gray-900">
+                        "Time Capsule is a beautiful way to preserve history and inspire future generations with our
+                        stories."
+                    </p>
+                </div>
+
+                <div class="mt-8 flex w-full items-center gap-x-4 border-t border-gray-100 pt-8">
+                    <img src="https://cdn1-production-images-kly.akamaized.net/kr20b7RdrjFEr0JCLS-6e7z8WZk=/1200x1200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4540978/original/011145800_1692239231-WhatsApp_Image_2023-08-17_at_09.18.34.jpeg"
+                        alt="Joko Widodo" class="h-12 w-12 rounded-full object-cover" loading="lazy">
+                    <div>
+                        <p class="font-semibold text-gray-900">Joko Widodo</p>
+                        <p class="text-sm text-gray-600">7th President of Indonesia</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Testimonial 3 -->
+            <article
+                class="flex flex-col items-start justify-between rounded-2xl bg-white p-8 ring-1 ring-gray-200 hover:ring-indigo-500 transition-shadow duration-300">
+                <div class="mb-6">
+                    <svg class="h-8 w-8 text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z" />
+                    </svg>
+                </div>
+
+                <div class="flex-1">
+                    <time datetime="2007-10-07" class="text-sm text-gray-500">
+                        October 7, 2007
+                    </time>
+
+                    <p class="mt-4 text-lg font-medium leading-6 text-gray-900">
+                        "Through Time Capsule, memories can transcend time, creating connections beyond generations."
+                    </p>
+                </div>
+
+                <div class="mt-8 flex w-full items-center gap-x-4 border-t border-gray-100 pt-8">
+                    <img src="{{ asset('storage/capsules/rapek.jpg') }}" alt="Rafi Ahmad"
+                        class="h-12 w-12 rounded-full object-cover" loading="lazy">
+                    <div>
+                        <p class="font-semibold text-gray-900">Rafi Ahmad</p>
+                        <p class="text-sm text-gray-600">Theoretical Physicist</p>
+                    </div>
+                </div>
+            </article>
         </div>
     </div>
-</div>
+</section>
