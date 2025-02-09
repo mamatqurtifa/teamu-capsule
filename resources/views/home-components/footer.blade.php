@@ -129,11 +129,11 @@
               </p>
 
               <!-- Love Message -->
-              <p class="text-sm text-gray-500">
+              <a href="/team" class="text-sm text-gray-500">
                   Made with
                   <span class="mx-1 inline-block animate-pulse text-red-500">❤</span>
                   by Teamu - Time and You Team
-              </p>
+              </a>
           </div>
       </div>
   </div>

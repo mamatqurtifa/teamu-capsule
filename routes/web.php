@@ -11,6 +11,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/team', function () {
+    return view('team');
+});
+
 // Section Routes - Harus diletakkan setelah routes yang lebih spesifik
 Route::get('/{section}', function ($section) {
     return view('home', ['section' => $section]);

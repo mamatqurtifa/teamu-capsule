@@ -7,6 +7,7 @@
     <meta name="description" content="Page not found - {{ config('app.name') }}">
     <title>404 - Page Not Found | {{ config('app.name') }}</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="{{ asset('teamu.png') }}" type="image/x-icon">
 </head>
 
 <body class="h-full">
