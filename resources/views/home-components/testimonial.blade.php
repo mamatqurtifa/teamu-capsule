@@ -2,7 +2,8 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <!-- Section Header -->
         <div class="mx-auto max-w-2xl text-center">
-            <p class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+            <p
+                class="mx-auto mb-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
                 What Users Say
             </p>
             <h2 class="mt-4 text-lg font-medium leading-8 text-gray-600">

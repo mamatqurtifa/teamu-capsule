@@ -3,7 +3,7 @@
         <!-- Header Section -->
         <div class="mx-auto max-w-2xl lg:text-center" data-aos="fade-up">
             <h2 class="text-base font-semibold leading-7 text-indigo-600">About Us</h2>
-            <p class="mt-2 text-pretty text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-balance">
+            <p class="mx-auto mb-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
                 Your Digital Time Machine
             </p>
             <p class="mt-6 text-lg/8 text-gray-600">
@@ -89,7 +89,7 @@
             </dl>
         </div>
 
-        
+
     </div>
 </section>
 
