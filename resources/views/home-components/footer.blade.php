@@ -103,7 +103,7 @@
                       </a>
                   </li>
                   <li>
-                      <a href="https://github.com/teamucapsule" 
+                      <a href="https://github.com/mamatqurtifa/teamu-capsule" 
                          class="group inline-flex items-center gap-x-2 text-sm text-gray-600 hover:text-indigo-600 focus:text-indigo-600 focus:outline-none transition-colors duration-200"
                          target="_blank" 
                          rel="noopener noreferrer">

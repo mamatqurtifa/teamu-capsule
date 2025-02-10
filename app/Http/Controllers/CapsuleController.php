@@ -54,7 +54,7 @@ class CapsuleController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'text' => 'required|string',
-            'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'image' => 'required|image|mimes:jpeg,jpg,png,gif,bmp,webp,svg,tiff,ico,heic,heif,raw,cr2,nef,arw,dng,raf|max:10240',
             'capsule_type' => 'required|in:public,private',
             'future_time' => 'required|date|after:now',
         ]);

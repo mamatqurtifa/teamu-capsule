@@ -42,17 +42,31 @@
                 <div class="relative">
                     <!-- Image Section -->
                     <div class="relative h-48 overflow-hidden">
-                        <img src="{{ asset('storage/' . $capsule->image) }}" alt="{{ $capsule->title }}"
-                            class="w-full h-full object-cover">
 
                         @if ($capsule->isLocked())
-                            <div class="absolute inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
-                                <svg class="w-10 h-10 text-white opacity-75" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                                </svg>
+                            <div class="relative h-48 bg-gradient-to-r from-indigo-200 to-indigo-400">
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <!-- Animated Treasure Chest -->
+                                    <div class="treasure-chest animate-bounce">
+                                        <svg class="w-32 h-32" viewBox="0 0 24 24" fill="none">
+                                            <path d="M4 10h16v8a2 2 0 01-2 2H6a2 2 0 01-2-2v-8z" fill="#818cf8" />
+                                            <path d="M2 8h20v2H2z" fill="#3730A3" />
+                                            <path d="M10 8V6a2 2 0 012-2v0a2 2 0 012 2v2" stroke="gold"
+                                                stroke-width="2" />
+                                            <rect x="7" y="12" width="10" height="2" fill="gold"
+                                                class="animate-pulse" />
+                                        </svg>
+                                    </div>
+                                    <div class="absolute bottom-4 text-white text-center">
+                                        <div class="flex items-center justify-center space-x-2">
+                                            <p class="font-semibold">Locked</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                        @else
+                            <img src="{{ asset('storage/' . $capsule->image) }}" alt="{{ $capsule->title }}"
+                                class="w-full h-48 object-cover">
                         @endif
 
                         <!-- Type Badge -->
