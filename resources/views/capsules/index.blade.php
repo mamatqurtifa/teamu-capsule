@@ -93,24 +93,21 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                     </svg>
-                                    Created: <span class="ml-1"
-                                        x-text="formatDate(selectedCapsule?.created_at)"></span>
+                                    Created: <span class="ml-1" x-text="selectedCapsule?.created_at"></span>
                                 </p>
                                 <p class="flex items-center text-gray-600">
-                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
-                                    Opens: <span class="ml-1"
-                                        x-text="formatDate(selectedCapsule?.future_time)"></span>
+                                    Opens: <span class="ml-1" x-text="selectedCapsule?.future_time"></span>
                                 </p>
                             </div>
                             <div class="text-right">
                                 <span class="inline-flex items-center px-3 py-1 rounded-md text-sm"
-                                    :class="capsuleTypeClass(selectedCapsule?.capsule_type)">
-                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
+                                    :class="selectedCapsule?.capsule_type === 'private' ? 'bg-gray-100 text-gray-800' :
+                                        'bg-indigo-100 text-indigo-800'">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                                     </svg>
@@ -129,19 +126,32 @@
             function capsuleManager() {
                 return {
                     selectedCapsule: null,
-                    filterType: 'all',
+                    filterType: localStorage.getItem('capsuleFilter') || 'all',
 
                     openCapsule(event, capsule) {
                         event.preventDefault();
                         this.selectedCapsule = capsule;
                     },
 
-                    // Add a filter function to determine capsule visibility
+                    setFilter(type) {
+                        this.filterType = type;
+                        localStorage.setItem('capsuleFilter', type);
+                    },
+
                     isVisible(capsuleType) {
                         return this.filterType === 'all' || this.filterType === capsuleType;
                     }
                 }
             }
+
+            // Fix for missing functions in Alpine expressions
+            document.addEventListener('alpine:init', () => {
+                Alpine.data('formData', () => ({
+                    old(field) {
+                        return @json(old())[field] || '';
+                    }
+                }));
+            });
         </script>
     @endpush
 </x-app-layout>

@@ -110,7 +110,7 @@ class PublicCapsuleController extends Controller
                     $query->orderBy('created_at', 'asc');
                     break;
                 case 'opening_soon':
-                    $query->orderBy('future_time', 'asc');
+                    $query->orderBy('future_time', 'desc');
                     break;
                 default:
                     $query->orderBy('created_at', 'desc');

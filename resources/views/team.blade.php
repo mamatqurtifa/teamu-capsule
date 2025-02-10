@@ -132,41 +132,6 @@
                 </div>
             </div>
 
-            <!-- Team Stats -->
-            <div class="mt-20 border-t border-gray-200 pt-12" data-aos="fade-up">
-                <dl class="grid grid-cols-1 gap-y-8 gap-x-6 sm:grid-cols-2 lg:grid-cols-4">
-                    <div class="mx-auto flex max-w-xs flex-col gap-y-4 text-center">
-                        <dt class="text-base leading-7 text-gray-600">Time Zone</dt>
-                        <dd
-                            class="order-first text-3xl font-semibold tracking-tight text-gray-900 hover:text-indigo-600">
-                            Asia/Jakarta</dd>
-                        <dd class="text-sm text-gray-500">GMT+7</dd>
-                    </div>
-                    <div class="mx-auto flex max-w-xs flex-col gap-y-4 text-center">
-                        <dt class="text-base leading-7 text-gray-600">Many Members</dt>
-                        <dd
-                            class="order-first text-3xl font-semibold tracking-tight text-gray-900 hover:text-indigo-600">
-                            637+</dd>
-                        <dd class="text-sm text-gray-500">Active Contributors</dd>
-                    </div>
-                    <div class="mx-auto flex max-w-xs flex-col gap-y-4 text-center">
-                        <dt class="text-base leading-7 text-gray-600">Current Date & Time</dt>
-                        <dd class="order-first text-2xl font-semibold tracking-tight text-gray-900 hover:text-indigo-600"
-                            id="currentDateTime">
-                            2025-02-09 14:18:37
-                        </dd>
-                        <dd class="text-sm text-gray-500">UTC Format</dd>
-                    </div>
-                    <div class="mx-auto flex max-w-xs flex-col gap-y-4 text-center">
-                        <dt class="text-base leading-7 text-gray-600">Base Location</dt>
-                        <dd
-                            class="order-first text-3xl font-semibold tracking-tight text-gray-900 hover:text-indigo-600">
-                            Yogyakarta</dd>
-                        <dd class="text-sm text-gray-500">Indonesia</dd>
-                    </div>
-                </dl>
-            </div>
-
             <!-- Location Map -->
             <div class="mt-16 rounded-2xl bg-gray-50 p-6 lg:p-8" data-aos="fade-up">
                 <div class="mb-8">
@@ -265,44 +230,6 @@
                 animation: float 6s ease-in-out infinite;
             }
         </style>
-    @endpush
-
-    @push('scripts')
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // AOS initialization
-                AOS.init({
-                    duration: 800,
-                    offset: 100,
-                    once: true
-                });
-
-                // Update current date time with Jakarta timezone
-                function updateDateTime() {
-                    const now = new Date();
-                    const jakartaTime = new Intl.DateTimeFormat('en-US', {
-                        timeZone: 'Asia/Jakarta',
-                        year: 'numeric',
-                        month: '2-digit',
-                        day: '2-digit',
-                        hour: '2-digit',
-                        minute: '2-digit',
-                        second: '2-digit',
-                        hour12: false
-                    }).format(now);
-
-                    // Format: YYYY-MM-DD HH:mm:ss
-                    const formatted = jakartaTime
-                        .replace(/(\d+)\/(\d+)\/(\d+), (\d+):(\d+):(\d+)/, '$3-$1-$2 $4:$5:$6');
-
-                    document.getElementById('currentDateTime').textContent = formatted;
-                }
-
-                setInterval(updateDateTime, 1000);
-                updateDateTime();
-            });
-        </script>
     @endpush
 </body>
 
