@@ -3,7 +3,6 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <!-- Back Button -->
                     <div class="mb-6">
                         <a href="{{ route('capsules.public.index') }}" class="flex items-center text-gray-600 hover:text-gray-900">
                             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -13,7 +12,6 @@
                         </a>
                     </div>
 
-                    <!-- Capsule Header -->
                     <div class="flex justify-between items-center mb-6">
                         <h1 class="text-2xl font-semibold text-gray-900">{{ $capsule->title }}</h1>
                         <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800">
@@ -24,14 +22,12 @@
                         </span>
                     </div>
 
-                    <!-- Capsule Image -->
                     <div class="mb-6">
                         <img src="{{ asset('storage/' . $capsule->image) }}" 
                              alt="{{ $capsule->title }}"
                              class="w-full rounded-lg shadow-lg object-cover">
                     </div>
 
-                    <!-- Capsule Details -->
                     <div class="bg-gray-50 rounded-lg p-6 mb-6">
                         <div class="grid grid-cols-2 gap-4 mb-4">
                             <div class="flex items-center text-gray-600">
@@ -48,7 +44,6 @@
                             </div>
                         </div>
 
-                        <!-- Capsule Content -->
                         <div class="prose max-w-none">
                             <p class="text-gray-700 whitespace-pre-line">{{ $capsule->text }}</p>
                         </div>

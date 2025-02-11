@@ -1,8 +1,6 @@
 <footer class="w-full border-t bg-white">
   <div class="mx-auto max-w-7xl px-6 py-12">
-      <!-- Main Footer Content -->
       <div class="grid grid-cols-1 gap-8 md:grid-cols-12 lg:gap-12">
-          <!-- Brand Section -->
           <div class="md:col-span-5">
               <div class="flex flex-col items-start">
                   <a href="/" class="flex items-center space-x-2">
@@ -12,7 +10,6 @@
                   <p class="mt-4 text-sm leading-6 text-gray-600">
                       Capture your memories, lock them in time, and rediscover them when the moment is right.
                   </p>
-                  <!-- Current Time Display -->
                   <div class="mt-4 text-xs space-y-1">
                       <p class="text-gray-500">
                           Current Date and Time (UTC):
@@ -32,7 +29,6 @@
               </div>
           </div>
 
-          <!-- Quick Links -->
           <div class="md:col-span-3">
               <h3 class="text-sm font-semibold leading-6 text-gray-900">Product</h3>
               <ul class="mt-4 space-y-3">
@@ -51,7 +47,6 @@
               </ul>
           </div>
 
-          <!-- Legal Links -->
           <div class="md:col-span-2">
               <h3 class="text-sm font-semibold leading-6 text-gray-900">Legal</h3>
               <ul class="mt-4 space-y-3">
@@ -70,7 +65,6 @@
               </ul>
           </div>
 
-          <!-- Connect Section -->
           <div class="md:col-span-2">
               <h3 class="text-sm font-semibold leading-6 text-gray-900">Connect</h3>
               <ul class="mt-4 space-y-3">
@@ -120,15 +114,12 @@
           </div>
       </div>
 
-      <!-- Footer Bottom -->
       <div class="mt-12 border-t border-gray-100 pt-8">
           <div class="flex flex-col items-center justify-between gap-4 md:flex-row">
-              <!-- Copyright -->
               <p class="text-sm text-gray-500">
                   &copy; {{ now()->year }} Teamu Capsule. All rights reserved.
               </p>
 
-              <!-- Love Message -->
               <a href="/team" class="text-sm text-gray-500">
                   Made with
                   <span class="mx-1 inline-block animate-pulse text-red-500">❤</span>

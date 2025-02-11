@@ -15,24 +15,20 @@
 
     <main class="grid min-h-[calc(100vh-4rem)] place-items-center bg-white px-6 py-16 sm:py-24 lg:px-8">
         <div class="max-w-2xl text-center">
-            <!-- Error Code with Animation -->
             <div class="relative">
                 <p class="text-base font-semibold text-gray-900">404</p>
                 <div class="absolute -inset-x-2 -inset-y-2 animate-pulse rounded-lg"></div>
             </div>
 
-            <!-- Main Error Message -->
             <h1 class="mt-4 text-balance text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                 Oops! Page not found
             </h1>
 
-            <!-- Error Description -->
             <p class="mt-6 text-pretty text-lg leading-8 text-gray-600">
                 Sorry, we couldn't find the page you're looking for. The page might have been removed,
                 renamed, or is temporarily unavailable.
             </p>
 
-            <!-- Action Buttons -->
             <div class="mt-10 flex items-center justify-center gap-x-6">
                 <a href="{{ url('/') }}"
                     class="group relative inline-flex items-center gap-x-2 rounded-full bg-gray-900 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 transition-all duration-300 ease-in-out">
@@ -46,7 +42,6 @@
                 </a>
             </div>
 
-            <!-- Contact Support -->
             <div class="mt-8 text-sm text-gray-500">
                 <p>Need help?
                     <a href="mailto:contact@qurtifa.me"

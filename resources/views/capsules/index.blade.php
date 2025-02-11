@@ -16,7 +16,6 @@
 
     <div class="py-12" x-data="capsuleManager()">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
-            <!-- Welcome Card -->
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                 <div class="w-full">
                     <div class="flex items-center space-x-3 mb-4">
@@ -33,7 +32,6 @@
                 </div>
             </div>
 
-            <!-- Create Capsule Form -->
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                 <div class="w-full">
                     <div class="flex items-center space-x-3 mb-4">
@@ -47,7 +45,6 @@
                 </div>
             </div>
 
-            <!-- Capsule List -->
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                 <div class="w-full">
                     @include('capsule-post.partials.capsule-list-capsule-post')
@@ -55,7 +52,6 @@
             </div>
         </div>
 
-        <!-- Modal -->
         <div x-show="selectedCapsule"
             class="fixed inset-0 bg-gray-500 bg-opacity-75 z-50 flex items-center justify-center" x-cloak
             @keydown.escape.window="selectedCapsule = null" @click="selectedCapsule = null">
@@ -144,7 +140,6 @@
                 }
             }
 
-            // Fix for missing functions in Alpine expressions
             document.addEventListener('alpine:init', () => {
                 Alpine.data('formData', () => ({
                     old(field) {

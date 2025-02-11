@@ -77,7 +77,7 @@
 
     <nav class="flex items-center justify-between p-6 lg:px-8" role="navigation" aria-label="Global">
         <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
+            <a href="/" class="-m-1.5 p-1.5">
                 <span class="sr-only">Teamu Capsule</span>
                 <img class="h-10 w-auto rounded-full" src="{{ asset('teamu.png') }}" alt="Logo">
             </a>
@@ -131,7 +131,6 @@
         @endif
     </nav>
 
-    <!-- Mobile menu -->
     <div class="lg:hidden" role="dialog" aria-modal="true" id="mobile-menu" x-show="menuOpen" x-cloak
         x-trap.noscroll.inert="menuOpen">
 
@@ -145,7 +144,7 @@
             x-transition:leave="transition ease-in duration-150"
             class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div class="flex items-center justify-between">
-                <a href="#" class="-m-1.5 p-1.5">
+                <a href="/" class="-m-1.5 p-1.5">
                     <span class="sr-only">Teamu Capsule</span>
                     <img class="h-10 w-auto" src="{{ asset('teamu.png') }}" alt="Logo">
                 </a>

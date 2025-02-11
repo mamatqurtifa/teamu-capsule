@@ -9,18 +9,12 @@ use Illuminate\Support\Facades\Auth;
 
 class CapsuleController extends Controller
 {
-    /**
-     * Display a listing of the user's capsules.
-     */
     public function index()
     {
         $capsules = Capsule::where('user_id', Auth::id())->latest()->get();
         return view('capsules.index', compact('capsules'));
     }
 
-    /**
-     * Display a listing of public capsules.
-     */
     public function publicIndex(Request $request)
     {
         $query = Capsule::query()
@@ -28,7 +22,6 @@ class CapsuleController extends Controller
             ->with('user')
             ->orderBy('created_at', 'desc');
 
-        // If search query is provided
         if ($request->has('search')) {
             $searchTerm = $request->search;
             $query->where(function($q) use ($searchTerm) {
@@ -46,9 +39,6 @@ class CapsuleController extends Controller
         return view('capsules.public.index', compact('capsules', 'currentTime'));
     }
 
-    /**
-     * Store a newly created capsule.
-     */
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -73,17 +63,12 @@ class CapsuleController extends Controller
         return redirect()->route('capsules.index')->with('success', 'Capsule created successfully.');
     }
 
-    /**
-     * Display the specified capsule.
-     */
     public function show(Capsule $capsule)
     {
-        // Check if user owns the capsule or if it's public
         if ($capsule->user_id !== Auth::id() && $capsule->capsule_type !== 'public') {
             abort(403);
         }
 
-        // Check if the capsule is ready to be opened
         if (!$this->isCapsuleReadyToOpen($capsule)) {
             return back()->with('error', 'This time capsule is not yet ready to be opened.');
         }
@@ -91,22 +76,16 @@ class CapsuleController extends Controller
         return view('capsules.show', compact('capsule'));
     }
 
-    /**
-     * Filter capsules based on various criteria.
-     */
     public function filter(Request $request)
     {
         $query = Capsule::query();
 
-        // If viewing public capsules
         if ($request->input('view') === 'public') {
             $query->where('capsule_type', 'public');
         } else {
-            // Only show user's own capsules
             $query->where('user_id', Auth::id());
         }
 
-        // Apply sort
         $sort = $request->input('sort', 'latest');
         switch ($sort) {
             case 'oldest':
@@ -120,7 +99,6 @@ class CapsuleController extends Controller
                 break;
         }
 
-        // Apply status filter
         if ($request->has('status')) {
             $now = Carbon::now();
             if ($request->status === 'locked') {
@@ -130,7 +108,6 @@ class CapsuleController extends Controller
             }
         }
 
-        // Apply type filter
         if ($request->has('type')) {
             $query->where('capsule_type', $request->type);
         }
@@ -147,17 +124,11 @@ class CapsuleController extends Controller
         return back();
     }
 
-    /**
-     * Check if a capsule is ready to be opened.
-     */
     protected function isCapsuleReadyToOpen(Capsule $capsule): bool
     {
         return Carbon::now()->gte($capsule->future_time);
     }
 
-    /**
-     * Get capsule status with styling class.
-     */
     public function getStatus(Capsule $capsule): array
     {
         $now = Carbon::now();

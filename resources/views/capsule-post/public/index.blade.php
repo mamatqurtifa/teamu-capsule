@@ -3,7 +3,6 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
                 <div class="bg-white" x-data="publicCapsuleManager()">
-                    <!-- Header -->
                     <div class="flex items-center justify-between mb-6">
                         <div class="flex items-center space-x-3">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none"
@@ -14,7 +13,6 @@
                             <h3 class="text-lg font-medium text-gray-900">{{ __('Public Capsules') }}</h3>
                         </div>
 
-                        <!-- Filters -->
                         <div class="flex items-center space-x-4 border shadow-md">
                             <select x-model="sortBy" @change="filterCapsules()"
                                 class="rounded-md border shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
@@ -38,18 +36,15 @@
                         </div>
                     </div>
 
-                    <!-- Capsules Grid -->
                     <div id="capsules-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         @foreach ($capsules as $capsule)
                             <div
                                 class="bg-white overflow-hidden sm:rounded-lg border border-gray-200 hover:border-indigo-300 transition-colors duration-200 shadow-md">
                                 <div class="relative">
-                                    <!-- Image Section -->
                                     <div class="relative h-48 overflow-hidden">
                                         @if ($capsule->isLocked())
                                             <div class="relative h-48 bg-gradient-to-r from-indigo-200 to-indigo-400">
                                                 <div class="absolute inset-0 flex items-center justify-center">
-                                                    <!-- Animated Treasure Chest -->
                                                     <div class="treasure-chest animate-bounce">
                                                         <svg class="w-32 h-32" viewBox="0 0 24 24" fill="none">
                                                             <path d="M4 10h16v8a2 2 0 01-2 2H6a2 2 0 01-2-2v-8z"
@@ -74,12 +69,10 @@
                                         @endif
                                     </div>
 
-                                    <!-- Content Section -->
                                     <div class="p-4 sm:p-6">
                                         <div class="flex items-center justify-between mb-2">
                                             <h4 class="text-lg font-medium text-gray-900">{{ $capsule->title }}</h4>
 
-                                            <!-- Author Badge -->
                                             <span
                                                 class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
                                                 <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor"
@@ -113,7 +106,6 @@
                                             </div>
                                         </div>
 
-                                        <!-- Status & Actions -->
                                         <div class="mt-4 flex items-center justify-between">
                                             <span
                                                 class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium {{ $capsule->getStatusClass() }}">
@@ -133,7 +125,6 @@
                         @endforeach
                     </div>
 
-                    <!-- Pagination -->
                     @if ($capsules->hasPages())
                         <div class="mt-6">
                             {{ $capsules->links() }}

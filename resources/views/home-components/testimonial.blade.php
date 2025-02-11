@@ -1,6 +1,5 @@
 <section class="bg-white py-24 sm:py-32" id="testimonials">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <!-- Section Header -->
         <div class="mx-auto max-w-2xl text-center">
             <p
                 class="mx-auto mb-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
@@ -11,13 +10,10 @@
             </h2>
         </div>
 
-        <!-- Testimonials Grid -->
         <div
             class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            <!-- Testimonial 1 -->
             <article
                 class="flex flex-col items-start justify-between rounded-2xl bg-white p-8 ring-1 ring-gray-200 hover:ring-indigo-500 transition-shadow duration-300">
-                <!-- Quote Icon -->
                 <div class="mb-6">
                     <svg class="h-8 w-8 text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
                         <path
@@ -45,7 +41,6 @@
                 </div>
             </article>
 
-            <!-- Testimonial 2 -->
             <article
                 class="flex flex-col items-start justify-between rounded-2xl bg-white p-8 ring-1 ring-gray-200 hover:ring-indigo-500 transition-shadow duration-300">
                 <div class="mb-6">
@@ -76,7 +71,6 @@
                 </div>
             </article>
 
-            <!-- Testimonial 3 -->
             <article
                 class="flex flex-col items-start justify-between rounded-2xl bg-white p-8 ring-1 ring-gray-200 hover:ring-indigo-500 transition-shadow duration-300">
                 <div class="mb-6">

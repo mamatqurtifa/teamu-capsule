@@ -30,8 +30,7 @@
                 
                             const data = await response.json();
                             document.getElementById('capsules-grid').innerHTML = data.html;
-                
-                            // Update URL
+
                             window.history.pushState({},
                                 '',
                                 `{{ route('capsules.public.index') }}?${params.toString()}`
@@ -49,9 +48,7 @@
                         this.$watch('sortBy', () => this.filterCapsules());
                     }
                 }" x-init="init">
-                    <!-- Header -->
                     <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
-                        <!-- Title Section -->
                         <div class="flex items-center space-x-3">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
@@ -61,9 +58,7 @@
                             <h3 class="text-lg font-medium text-gray-900">{{ __('Public Capsules') }}</h3>
                         </div>
 
-                        <!-- Filters Section -->
                         <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
-                            <!-- Select/Dropdown Filter -->
                             <div class="relative">
                                 <select x-model="sortBy"
                                     class="w-full sm:w-44 h-10 px-3 text-sm text-gray-700 border border-gray-300 rounded-lg 
@@ -77,7 +72,6 @@
                                 </div>
                             </div>
 
-                            <!-- Search Input -->
                             <div class="relative flex-grow sm:flex-grow-0 sm:min-w-[260px]">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor"
@@ -104,7 +98,6 @@
                         </div>
                     </div>
 
-                    <!-- Loading Overlay -->
                     <div x-show="isLoading" x-cloak
                         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
                         <div class="bg-white rounded-lg p-4 flex items-center space-x-3">
@@ -120,7 +113,6 @@
                         </div>
                     </div>
 
-                    <!-- Capsules Grid -->
                     <div id="capsules-grid">
                         @include('capsules.public._capsules_list', ['capsules' => $capsules])
                     </div>

@@ -16,7 +16,6 @@
                     <p class="mt-8 text-lg font-medium text-gray-500 sm:text-xl">Capture and cherish memories with <span
                             class="text-gray-800 font-semibold">Teamu
                             Capsule</span></p>
-                    <!-- CTA Section -->
                     <div class="mt-16 text-center" data-aos="fade-up">
                         <a href="{{ route('register') }}"
                             class="inline-flex items-center gap-x-2 rounded-full bg-gray-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-colors duration-300 ease-in-out">

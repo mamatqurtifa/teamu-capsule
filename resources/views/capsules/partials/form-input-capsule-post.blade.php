@@ -1,7 +1,6 @@
 <form action="{{ route('capsule-post.store') }}" method="POST" enctype="multipart/form-data" class="space-y-6">
     @csrf
 
-    <!-- Title -->
     <div>
         <x-input-label for="title" :value="__('Title')" />
         <x-text-input 
@@ -17,7 +16,6 @@
         <x-input-error :messages="$errors->get('title')" class="mt-2" />
     </div>
 
-    <!-- Text -->
     <div>
         <x-input-label for="text" :value="__('Text')" />
         <textarea 
@@ -31,7 +29,6 @@
         <x-input-error :messages="$errors->get('text')" class="mt-2" />
     </div>
 
-    <!-- Image -->
     <div>
         <x-input-label for="image" :value="__('Image')" />
         <div class="mt-1">
@@ -54,7 +51,6 @@
         <x-input-error :messages="$errors->get('image')" class="mt-2" />
     </div>
 
-    <!-- Capsule Type -->
     <div>
         <x-input-label for="capsule_type" :value="__('Capsule Type')" />
         <div class="relative mt-1">
@@ -73,7 +69,6 @@
         <x-input-error :messages="$errors->get('capsule_type')" class="mt-2" />
     </div>
 
-    <!-- Future Time -->
     <div>
         <x-input-label for="future_time" :value="__('Future Time')" />
         <input 
@@ -87,7 +82,6 @@
         <x-input-error :messages="$errors->get('future_time')" class="mt-2" />
     </div>
 
-    <!-- Submit Button -->
     <div class="flex items-center justify-end pt-4">
         <x-primary-button>
             {{ __('Create Capsule') }}
@@ -96,8 +90,7 @@
 </form>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Image preview functionality
+document.addEventListener('DOMContentLoaded', function() {functionality
     const imageInput = document.querySelector('input[type="file"]');
     const uploadLabel = imageInput.closest('label');
     const textContainer = uploadLabel.querySelector('.space-y-1');
@@ -106,7 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (file) {
             const reader = new FileReader();
             reader.onload = function(e) {
-                // Create preview container if it doesn't exist
                 let previewContainer = uploadLabel.querySelector('.preview-container');
                 if (!previewContainer) {
                     previewContainer = document.createElement('div');
@@ -125,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 textContainer.style.display = 'none';
                 
-                // Add remove functionality
                 const removeButton = previewContainer.querySelector('button');
                 removeButton.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -144,7 +135,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Drag and drop functionality
     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
         uploadLabel.addEventListener(eventName, preventDefaults, false);
     });

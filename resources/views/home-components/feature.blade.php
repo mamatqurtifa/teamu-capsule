@@ -62,7 +62,7 @@
                     </div>
                     <div class="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2">
                         <img class="h-[min(152px,40cqw)] object-cover grayscale"
-                            src="https://tailwindui.com/plus-assets/img/component-images/bento-03-security.png" alt="">
+                            src="{{ asset('storage/capsules/teamu-security.png') }}" alt="">
                     </div>
                 </div>
                 <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5"></div>

@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name') }} - Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Tambahkan Alpine.js untuk interaktivitas -->
+    <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!-- Favicon -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -17,7 +17,6 @@
 <body class="antialiased">
     <div x-data="{ showPassword: false }"
         class="min-h-screen flex flex-col justify-center items-center px-4 py-12 lg:px-8 relative overflow-hidden">
-        <!-- Background gradients tetap sama -->
         <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
             aria-hidden="true">
             <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#100c07] to-[#cac9cd] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
@@ -25,7 +24,6 @@
             </div>
         </div>
 
-        <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
 
         <div class="w-full max-w-md p-6 bg-white rounded-2xl shadow-lg border">
@@ -37,11 +35,9 @@
             <form method="POST" action="{{ route('login') }}" class="mt-8 space-y-6">
                 @csrf
 
-                <!-- Remember Device (Optional) -->
                 <input type="hidden" name="remember" value="true">
 
                 <div class="space-y-5">
-                    <!-- Email Address -->
                     <div>
                         <label for="email" class="block text-sm font-medium text-gray-900">
                             Email address
@@ -55,7 +51,6 @@
                         <x-input-error :messages="$errors->get('email')" class="mt-2" />
                     </div>
 
-                    <!-- Password -->
                     <div>
                         <div class="flex items-center justify-between">
                             <label for="password" class="block text-sm font-medium text-gray-900">
@@ -73,7 +68,6 @@
                                 autocomplete="current-password"
                                 class="block w-full rounded-md bg-white px-3 py-1.5 text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-gray-600 focus:shadow-lg transition duration-500 ease-in-out sm:text-sm/6"
                                 placeholder="••••••••">
-                            <!-- Toggle Password Visibility -->
                             <button type="button" @click="showPassword = !showPassword"
                                 class="absolute inset-y-0 right-0 flex items-center pr-3">
                                 <svg class="h-5 w-5 text-gray-400"
@@ -95,7 +89,6 @@
                         <x-input-error :messages="$errors->get('password')" class="mt-2" />
                     </div>
 
-                    <!-- Remember Me -->
                     <div class="flex items-center">
                         <input id="remember_me" type="checkbox" name="remember"
                             class="h-4 w-4 rounded border-gray-300 text-gray-600 focus:ring-gray-600">
@@ -128,7 +121,6 @@
             </p>
         </div>
 
-        <!-- Bottom gradient tetap sama -->
         <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
             aria-hidden="true">
             <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#000000] to-[#cac9cd] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"

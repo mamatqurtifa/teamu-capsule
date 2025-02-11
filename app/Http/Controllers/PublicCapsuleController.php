@@ -13,17 +13,12 @@ class PublicCapsuleController extends Controller
 {
     public function __construct()
     {
-        // Simplify middleware - no need for double auth check
         $this->middleware(['auth', 'web']);
     }
 
-    /**
-     * Display a listing of public capsules
-     */
     public function index()
     {
         try {
-            // Add logging to debug auth issues
             Log::info('Public capsules access attempt', [
                 'user_id' => Auth::id(),
                 'user_name' => Auth::user()->name,
@@ -32,7 +27,7 @@ class PublicCapsuleController extends Controller
 
             $capsules = Capsule::query()
                 ->where('capsule_type', 'public')
-                ->with('user') // Eager load user relationship
+                ->with('user')
                 ->orderBy('created_at', 'desc')
                 ->paginate(12);
 
@@ -52,13 +47,9 @@ class PublicCapsuleController extends Controller
         }
     }
 
-    /**
-     * Display the specified public capsule
-     */
     public function show(Capsule $capsule)
     {
         try {
-            // Validate capsule type
             if ($capsule->capsule_type !== 'public') {
                 Log::warning('Non-public capsule access attempt', [
                     'capsule_id' => $capsule->id,
@@ -67,7 +58,6 @@ class PublicCapsuleController extends Controller
                 abort(404, 'Capsule not found or not public');
             }
 
-            // Check if capsule is locked
             if ($capsule->isLocked()) {
                 Log::info('Locked capsule access attempt', [
                     'capsule_id' => $capsule->id,
@@ -93,9 +83,6 @@ class PublicCapsuleController extends Controller
         }
     }
 
-    /**
-     * Filter public capsules
-     */
     public function filter(Request $request)
     {
         try {
@@ -103,7 +90,6 @@ class PublicCapsuleController extends Controller
                 ->where('capsule_type', 'public')
                 ->with('user');
 
-            // Apply sorting
             $sort = $request->input('sort', 'latest');
             switch ($sort) {
                 case 'oldest':
@@ -117,7 +103,6 @@ class PublicCapsuleController extends Controller
                     break;
             }
 
-            // Apply status filter with proper timezone handling
             if ($request->has('status')) {
                 $now = Carbon::now('Asia/Jakarta');
                 if ($request->status === 'locked') {
@@ -127,7 +112,6 @@ class PublicCapsuleController extends Controller
                 }
             }
 
-            // Apply search with proper escaping
             if ($request->filled('search')) {
                 $searchTerm = '%' . addcslashes($request->search, '%_') . '%';
                 $query->where(function($q) use ($searchTerm) {

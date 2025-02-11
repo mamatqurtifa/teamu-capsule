@@ -1,5 +1,4 @@
 <div class="bg-white" x-data="capsuleManager()">
-    <!-- Filter Buttons -->
     <div class="flex items-center justify-between mb-4">
         <div class="flex items-center space-x-3">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24"
@@ -46,7 +45,6 @@
                         @if ($capsule->isLocked())
                             <div class="relative h-48 bg-gradient-to-r from-indigo-200 to-indigo-400">
                                 <div class="absolute inset-0 flex items-center justify-center">
-                                    <!-- Animated Treasure Chest -->
                                     <div class="treasure-chest animate-bounce">
                                         <svg class="w-32 h-32" viewBox="0 0 24 24" fill="none">
                                             <path d="M4 10h16v8a2 2 0 01-2 2H6a2 2 0 01-2-2v-8z" fill="#818cf8" />
@@ -69,7 +67,6 @@
                                 class="w-full h-48 object-cover">
                         @endif
 
-                        <!-- Type Badge -->
                         <div class="absolute top-3 right-3">
                             <span
                                 class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium
@@ -88,7 +85,6 @@
                         </div>
                     </div>
 
-                    <!-- Content Section -->
                     <div class="p-4 sm:p-6">
                         <h4 class="text-lg font-medium text-gray-900 mb-2">{{ $capsule->title }}</h4>
 
@@ -109,7 +105,6 @@
                             </div>
                         </div>
 
-                        <!-- Actions -->
                         <div class="mt-4 flex items-center justify-between">
                             <span
                                 class="inline-flex items-center px-2.5 pt-0.5 pb-1 rounded-full text-xs font-medium {{ $capsule->getStatusClass() }}">
@@ -136,7 +131,6 @@
         @endforeach
     </div>
 
-    <!-- Modal -->
     <div x-show="selectedCapsule" class="fixed inset-0 bg-gray-500 bg-opacity-75 z-50 overflow-y-auto" x-cloak
         @keydown.escape.window="selectedCapsule = null">
         <div class="flex min-h-screen items-end justify-center p-4 text-center sm:items-center sm:p-0">

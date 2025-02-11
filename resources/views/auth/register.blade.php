@@ -16,7 +16,6 @@
 <body class="antialiased">
     <div x-data="{ showPassword: false, showConfirmPassword: false }"
         class="flex h-screen max-w-screen overflow-hidden flex-col justify-center items-center px-4 py-12 lg:px-8 relative">
-        <!-- Top gradient -->
         <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
             aria-hidden="true">
             <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#100c07] to-[#cac9cd] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
@@ -36,7 +35,6 @@
             <div class="mt-6 w-full sm:max-w-md">
                 <form class="space-y-4 w-full" method="POST" action="{{ route('register') }}">
                     @csrf
-                    <!-- Name -->
                     <div>
                         <label for="name" class="block text-sm/6 font-medium text-gray-900">Name</label>
                         <div class="mt-2">
@@ -47,7 +45,6 @@
                         <x-input-error :messages="$errors->get('name')" class="mt-2" />
                     </div>
 
-                    <!-- Email -->
                     <div>
                         <label for="email" class="block text-sm/6 font-medium text-gray-900">Email address</label>
                         <div class="mt-2">
@@ -58,7 +55,6 @@
                         <x-input-error :messages="$errors->get('email')" class="mt-2" />
                     </div>
 
-                    <!-- Password -->
                     <div>
                         <label for="password" class="block text-sm/6 font-medium text-gray-900">Password</label>
                         <div class="mt-2 relative">
@@ -87,7 +83,6 @@
                         <x-input-error :messages="$errors->get('password')" class="mt-2" />
                     </div>
 
-                    <!-- Confirm Password -->
                     <div>
                         <label for="password_confirmation" class="block text-sm/6 font-medium text-gray-900">
                             Confirm Password
@@ -139,7 +134,6 @@
             </div>
         </div>
 
-        <!-- Bottom gradient -->
         <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
             aria-hidden="true">
             <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#000000] to-[#cac9cd] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"

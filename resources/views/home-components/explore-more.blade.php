@@ -1,8 +1,6 @@
 <section class="bg-white py-24 sm:py-32" id="about">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <!-- Header Section -->
         <div class="mx-auto max-w-2xl lg:text-center" data-aos="fade-up">
-            <h2 class="text-base font-semibold leading-7 text-indigo-600">About Us</h2>
             <p class="mx-auto mb-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
                 Your Digital Time Machine
             </p>
@@ -14,10 +12,8 @@
             </p>
         </div>
 
-        <!-- Features Grid -->
         <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
             <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-                <!-- Feature 1: Push Memories -->
                 <div class="relative pl-16 group" data-aos="fade-right">
                     <dt class="text-base/7 font-semibold text-gray-900">
                         <div
@@ -56,7 +52,6 @@
                     </dd>
                 </div>
 
-                <!-- Feature 2: Time Reveal -->
                 <div class="relative pl-16 group" data-aos="fade-left">
                     <dt class="text-base/7 font-semibold text-gray-900">
                         <div

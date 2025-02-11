@@ -12,9 +12,7 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <!-- Stats Overview -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                <!-- Total Capsules -->
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6">
                         <div class="flex items-center justify-between">
@@ -34,7 +32,6 @@
                     </div>
                 </div>
 
-                <!-- Locked Capsules -->
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6">
                         <div class="flex items-center justify-between">
@@ -55,7 +52,6 @@
                     </div>
                 </div>
 
-                <!-- Unlocked Capsules -->
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6">
                         <div class="flex items-center justify-between">
@@ -77,9 +73,7 @@
                 </div>
             </div>
 
-            <!-- Recent Activity and Quick Actions -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Recent Activity -->
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6">
                         <h3 class="text-lg font-semibold text-gray-900 mb-4">Recent Activity</h3>
@@ -123,7 +117,6 @@
                     </div>
                 </div>
 
-                <!-- Quick Actions -->
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6">
                         <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>

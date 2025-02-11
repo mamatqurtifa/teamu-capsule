@@ -3,12 +3,10 @@
         <div
             class="bg-white overflow-hidden shadow-sm sm:rounded-lg border border-gray-200 hover:border-indigo-300 transition-colors duration-200">
             <div class="relative">
-                <!-- Image Section -->
                 <div class="relative h-48 overflow-hidden">
                     @if ($capsule->isLocked())
                         <div class="relative h-48 bg-gradient-to-r from-indigo-200 to-indigo-400">
                             <div class="absolute inset-0 flex items-center justify-center">
-                                <!-- Animated Treasure Chest -->
                                 <div class="treasure-chest animate-bounce">
                                     <svg class="w-32 h-32" viewBox="0 0 24 24" fill="none">
                                         <path d="M4 10h16v8a2 2 0 01-2 2H6a2 2 0 01-2-2v-8z" fill="#818cf8" />
@@ -31,12 +29,10 @@
                     @endif
                 </div>
 
-                <!-- Content Section -->
                 <div class="p-4 sm:p-6">
                     <div class="flex items-center justify-between mb-2">
                         <h4 class="text-lg font-medium text-gray-900">{{ $capsule->title }}</h4>
 
-                        <!-- Author Badge -->
                         <span
                             class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
                             <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -47,7 +43,6 @@
                         </span>
                     </div>
 
-                    <!-- Timestamps -->
                     <div class="space-y-2 text-sm">
                         <div class="flex items-center text-gray-500">
                             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -65,7 +60,6 @@
                         </div>
                     </div>
 
-                    <!-- Status & Actions -->
                     <div class="mt-4 flex items-center justify-between">
                         <span
                             class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium {{ $capsule->getStatusClass() }}">

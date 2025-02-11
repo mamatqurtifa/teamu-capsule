@@ -28,33 +28,17 @@ class Capsule extends Model {
         'future_time' => 'datetime'
     ];
 
-    /**
-    * Get the user that owns the capsule.
-    */
-
     public function user() {
         return $this->belongsTo( User::class );
     }
-
-    /**
-    * Check if the capsule is locked.
-    */
 
     public function isLocked() {
         return Carbon::now( 'Asia/Jakarta' )->lt( $this->future_time );
     }
 
-    /**
-    * Check if the capsule is public.
-    */
-
     public function isPublic() {
         return $this->capsule_type === 'public';
     }
-
-    /**
-    * Get time remaining until capsule opens.
-    */
 
     public function getTimeRemaining() {
         if ( !$this->isLocked() ) {
@@ -76,10 +60,6 @@ class Capsule extends Model {
         }
     }
 
-    /**
-    * Get detailed status of the capsule.
-    */
-
     public function getStatus() {
         if ( !$this->isLocked() ) {
             return 'Open';
@@ -97,10 +77,6 @@ class Capsule extends Model {
         }
     }
 
-    /**
-    * Get status CSS class for styling.
-    */
-
     public function getStatusClass() {
         $status = $this->getStatus();
 
@@ -114,41 +90,21 @@ class Capsule extends Model {
         ;
     }
 
-    /**
-    * Scope a query to only include public capsules.
-    */
-
     public function scopePublic( $query ) {
         return $query->where( 'capsule_type', 'public' );
     }
-
-    /**
-    * Scope a query to only include unlocked capsules.
-    */
 
     public function scopeUnlocked( $query ) {
         return $query->where( 'future_time', '<=', Carbon::now( 'Asia/Jakarta' ) );
     }
 
-    /**
-    * Scope a query to only include locked capsules.
-    */
-
     public function scopeLocked( $query ) {
         return $query->where( 'future_time', '>', Carbon::now( 'Asia/Jakarta' ) );
     }
 
-    /**
-    * Get formatted creation date.
-    */
-
     public function getFormattedCreatedAt() {
         return $this->created_at->setTimezone( 'Asia/Jakarta' )->format( 'M d, Y H:i' );
     }
-
-    /**
-    * Get formatted future time.
-    */
 
     public function getFormattedFutureTime() {
         return $this->future_time->setTimezone( 'Asia/Jakarta' )->format( 'M d, Y H:i' );
