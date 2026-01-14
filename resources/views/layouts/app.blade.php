@@ -15,9 +15,8 @@
     <!-- Styles / Scripts -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="shortcut icon" href="{{ asset('teamu.png') }}" type="image/x-icon">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-        @vite(['../../resources/css/app.css', '../../resources/js/app.js'])
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
     @else
         <script src="https://cdn.tailwindcss.com"></script>
     @endif
