@@ -80,7 +80,7 @@ Route::middleware(['auth', 'verified', 'throttle:global'])->group(function () {
         ->group(function () {
             Route::get('/capsules', 'index')->name('capsules.index');
             Route::post('/capsules', 'store')->name('capsules.store');
-            Route::get('/capsules/{id}', 'show')->name('capsules.show');
+            Route::get('/capsules/{capsule}', 'show')->name('capsules.show');
     });
 
     // Capsule Posts Routes
